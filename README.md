@@ -38,7 +38,7 @@ Based on the Non-null Count, some columns have many missing values, especially c
 - 'year', 'manufacturer', 'model', 'odometer', 'title_status', 'transmission', and 'state' appear to have significant potential for analysis, though some have missing values that need handling.
 
 ### Insights from the Distribution of Numerical Features
-![](images/DistributionOfNumericalFeatures.png)   
+![Distribution of Numerical Features](images/DistributionOfNumericalFeatures.png)   
 - **id**:
   - The `id` feature is a unique identifier for each entry.
   - Not relevant for analysis and can be dropped.
@@ -66,14 +66,12 @@ Based on the Non-null Count, some columns have many missing values, especially c
 4. Continue with further exploratory data analysis and data preparation steps.
 
 ### Insights from the Correlation Matrix:
-![](images/CorrelationMatix.png)   
+![Correlation Matrix](images/CorrelationMatix.png)   
 - **Price**:
   - Has a very weak negative correlation with `year` (-0.0049), indicating that newer cars do not significantly influence the price in our dataset.
   - Has a very weak positive correlation with `odometer` (0.0100), suggesting that the odometer reading (mileage) does not strongly influence the price.
-  
 - **Year**:
   - Shows a weak negative correlation with `odometer` (-0.1572), indicating that newer cars tend to have lower mileage, which is intuitive.
-  
 - **Odometer**:
   - Exhibits a very weak positive correlation with `price` (0.0100), reinforcing the observation that mileage does not significantly impact the price in our dataset.
 
@@ -83,7 +81,6 @@ Based on the Non-null Count, some columns have many missing values, especially c
 - This weak correlation indicates a need for further exploration and inclusion of other variables to build a more predictive model for used car prices.
 
 ## Insights from Categorical Features Analysis:
-
 ### Region
 ![](images/DistributionOfRegion.png) 
 - There are 404 unique regions.
