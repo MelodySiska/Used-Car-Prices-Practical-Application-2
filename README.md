@@ -1,4 +1,4 @@
-Link to code: SiskaUsedCarPracticalApplication2.ipynb 
+Link to code: Link to code: https://github.com/MelodySiska/Berkeley-Machine-Learning-and-Artificial-Intelligence/blob/main/SiskaUsedCarPracticalApplication2.ipynb  
 
 # Used Car Prices Practical Application 2
  Analysis to understand which factors impact used car prices
