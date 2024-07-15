@@ -39,7 +39,8 @@ Based on the Non-null Count, some columns have many missing values, especially c
 
 ### Insights from the Distribution of Numerical Features
 ![Distribution of Numerical Features](images/DistributionOfNumericalFeatures.png)   
-![Distribution of Numerical Features](https://github.com/MelodySiska/Used-Car-Prices-Practical-Application-2/blob/main/images//DistributionOfNumericalFeatures.png) 
+![DistributionOfNumericalFeatures](https://github.com/user-attachments/assets/266e4fab-3d3b-4076-a591-1cb523fd2e90)
+
 
 - **id**:
   - The `id` feature is a unique identifier for each entry.
