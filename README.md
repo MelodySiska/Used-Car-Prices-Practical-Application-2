@@ -38,9 +38,7 @@ Based on the Non-null Count, some columns have many missing values, especially c
 - 'year', 'manufacturer', 'model', 'odometer', 'title_status', 'transmission', and 'state' appear to have significant potential for analysis, though some have missing values that need handling.
 
 ### Insights from the Distribution of Numerical Features
-![Distribution of Numerical Features](images/DistributionOfNumericalFeatures.png)   
 ![DistributionOfNumericalFeatures](https://github.com/user-attachments/assets/266e4fab-3d3b-4076-a591-1cb523fd2e90)
-
 
 - **id**:
   - The `id` feature is a unique identifier for each entry.
@@ -69,7 +67,8 @@ Based on the Non-null Count, some columns have many missing values, especially c
 4. Continue with further exploratory data analysis and data preparation steps.
 
 ### Insights from the Correlation Matrix:
-![Correlation Matrix](images/CorrelationMatix.png)   
+![CorrelationMatix](https://github.com/user-attachments/assets/b437ca5d-927a-49aa-bf51-a1d329666f8b)
+
 - **Price**:
   - Has a very weak negative correlation with `year` (-0.0049), indicating that newer cars do not significantly influence the price in our dataset.
   - Has a very weak positive correlation with `odometer` (0.0100), suggesting that the odometer reading (mileage) does not strongly influence the price.
@@ -85,42 +84,42 @@ Based on the Non-null Count, some columns have many missing values, especially c
 
 ## Insights from Categorical Features Analysis:
 ### Region
-![](images/DistributionOfRegion.png) 
+![DistributionOfRegion](https://github.com/user-attachments/assets/1d90b124-eb03-431c-9b87-0076ac7fab41)
 - There are 404 unique regions.
 - The distribution is quite broad, with some regions having significantly more entries than others.
 - Some regions are represented more frequently, potentially indicating larger markets or more active listings in those areas.
 
 ### Manufacturer
-![](images/DistributionOfManufacturer.png) 
+![DistributionOfManufacturer](https://github.com/user-attachments/assets/a9ccf4f8-edff-418f-b505-2f91f4c6bbd6)
 - Ford, Chevrolet, and Toyota are the top three most common manufacturers.
 - There's a long tail of less common manufacturers, some. like Morgan and Alfa-Romeo, having very few entries.
 - The majority of the cars in the dataset are from popular and commonly known brands that I have actually heard of :-)
 
 ### Condition
-![](images/DistributionOfCondition.png) 
+![DistributionOfCondition](https://github.com/user-attachments/assets/21c702dd-47a7-4f0c-a421-53740c05c637)
 - Most cars are in 'good' and 'excellent' condition.
 - 'New' cars are very few, likely because the dataset focuses on used cars. This should probably be excluded from the dataset.
 - The 'salvage' condition is the least common, which makes sense as these cars are typically less desirable.
 
 ### Cylinders
-![](images/DistributionOfCylinders) 
+![DistributionOfCylinders](https://github.com/user-attachments/assets/63e1ef90-0687-4c56-b07f-aeac8823baf1)
 - Most cars have 4, 6, or 8 cylinders.
 - There are very few cars with 3, 5, 10, or 12 cylinders, indicating these configurations are less common at least I have never heard of them.
 
 ### Fuel
-![](images/DistributionOfFuel.png) 
+![DistributionOfFuel](https://github.com/user-attachments/assets/525c1c8d-ccea-4c01-9e38-995a590a588a)
 - The majority of cars run on gas.
 - Diesel and 'other' fuels are less common.
 - Hybrid and electric cars are rare in this dataset, which may reflect the market trends at the time the data was collected.
 
 ### Title Status
-![](images/DistributionOfTitleStatus.png) 
+![DistributionOfTitleStatus](https://github.com/user-attachments/assets/9780195a-0b5c-4792-9c4d-ee63ac9955fd)
 - Most cars have a 'clean' title status.
 - Rebuilt and salvage titles are less common.
 - Other title statuses like 'lien', 'missing', and 'parts only' are very rare.
 
 ### Transmission
-![](images/DistributionOfTransmission.png) 
+![DistributionOfTransmission](https://github.com/user-attachments/assets/19bbd67f-b7d8-45f5-975b-6b4af0f1e9b6)
 - Automatic transmission is the most common type.
 - Manual transmissions are less common but still significant.
 - 'Other' transmission types are relatively few, I am not sure what this could be if it isnt automatic or manual but that could be my lack of car knowledge. 
@@ -153,14 +152,12 @@ Based on the Non-null Count, some columns have many missing values, especially c
 After the initial exploration and fine tuning of the business understanding, it is time to construct the final dataset prior to modeling.  I chose to drop columns with more than 50% missing data, and dropped columns 'VIN', 'region', 'model', 'id' which didnt add value to the analysis. I dropped rows that were missing the year, had prices that are $1000 or less, without a listed manufacturer, odometer readings less 1,000 or more than 250,000.  I alos removed  high price outliers above the 99th percentile. As a result, there were 346,125 vehichles with 13 features in the dataset.
 
 ### Insights from Price Distribution After Removing High Outliers and other cleaning
-![](images/DistributionOfPriceAfterRemovingHighOutliers.png) 
-
+![DistributionOfPriceAfterRemovingHighOutliers](https://github.com/user-attachments/assets/bfdf5102-3e4c-4ca9-9d6c-8c7974884f03)
 - **Histogram Analysis**:
   - The updated histogram shows a more normalized distribution of car prices compared to the previous histogram.
   - Most prices now fall within the range of $0 to $60,000, with a noticeable peak around $10,000.
   - The skewness present in the earlier histogram, due to extremely high outliers, is significantly reduced.
   - The distribution now has a more gradual decline after the peak.
-
 - **Comparison to Initial Histogram**:
   - **Initial Histogram**:
     - Had extreme values reaching up to $3.7 billion, which heavily skewed the distribution.
@@ -209,9 +206,7 @@ All other manufacturers were grouped into the 'Other' category.
 ## Insights from Price Distribution Analysis
 
 ### Price Distribution by Area of Country
-
-![](images/BoxPlotPriceDistributionByAreaOfCountry.png) 
-
+![BoxPlotPriceDistributionByAreaOfCountry](https://github.com/user-attachments/assets/3548686b-01a9-4c90-a025-2627fd364d94)
 - **South**: The median price of cars in the South is around $20,000. The interquartile range (IQR) is relatively wide, indicating a diverse range of car prices. There are a few outliers above $60,000.
 - **Other**: The price distribution in the Other category is similar to the South, with a median around $20,000 and a wide IQR. The presence of outliers above $60,000 is also noticeable.
 - **West Coast**: The median price on the West Coast is slightly lower, around $18,000. The IQR is also wide, with outliers similar to other regions.
@@ -219,22 +214,18 @@ All other manufacturers were grouped into the 'Other' category.
 - **Midwest**: The Midwest has the lowest median price among the regions, around $17,000. The IQR is wide, with outliers present.
 
 ### Price Distribution by Manufacturer Category
-
-![](images/BoxPlotPriceDistributionByManufacturerCategory.png)  
-
+![BoxPlotPriceDistributionByManufacturerCategory](https://github.com/user-attachments/assets/f613af1a-9bc6-4646-8a09-94ab015f600d)
 - **Other**: The median price for cars in the Other category is around $15,000. The IQR is wide, showing a diverse range of car prices. There are a few outliers above $60,000.
 - **High-End**: The median price for High-End cars is significantly higher, around $30,000. The IQR is also wide, indicating a broad range of prices. There are several outliers above $60,000.
 
 ### Key Takeaways
-
 - The price distributions across different regions do not show significant variations in the median values. However, there are outliers present in all regions.
 - High-End manufacturers generally have a higher median price compared to other manufacturers, which aligns with expectations given the premium nature of these brands.
 - The wide IQR in all categories indicates a significant variation in car prices within each group, suggesting a diverse dataset.
 
 ## Odometer Imputation Strategy
-![](images/PlotPriceDistributionByOdometer.png)  
+![PlotPriceDistributionByOdometer](https://github.com/user-attachments/assets/efdb15be-4014-403d-a28f-6c3f9c47d629)
 Given the skewed distribution, I proceeded with the median for imputing missing odometer values.
-
 
 ### Model Performance Summary
 I Split the dataset into training and testing sets and ran multiple models to learn the best way to analyze impacts of the features on pricing.
@@ -259,14 +250,11 @@ I Split the dataset into training and testing sets and ran multiple models to le
 - R2: 0.9060
 
 ###Insights
-
 **Linear Models**:
 - Linear, Ridge, and Lasso regression models all perform similarly with RMSE around 7592 and R2 around 0.6565-0.6566. This suggests that adding regularization (Lasso and Ridge) does not significantly impact performance for this dataset.
 - The performance indicates that these models are able to explain approximately 65.66% of the variance in the price, but their prediction errors are relatively high.
-
 **Elastic Net Regression**:
 - This model performs worse than the other linear models, with a higher RMSE and lower R2. This suggests that the combination of L1 and L2 regularization in Elastic Net does not suit this dataset as well as the other linear approaches.
-
 **Random Forest**:
 - This model significantly outperforms all the linear models with a much lower RMSE of 3973.0588 and a higher R2 of 0.9060.
 - The Random Forest model explains approximately 90.60% of the variance in the price and has a much lower prediction error, indicating it is better at capturing the underlying patterns in the data.
@@ -275,8 +263,8 @@ I Split the dataset into training and testing sets and ran multiple models to le
 I ran intoissues trying to run the Grid Search cross-validation due to the number of features and columns. I let it run overnight and still was unable to complete the analysis in this manner despite decreasing the number of folds. As a result, I decided to work on feature reduction. I wqs able to reduce from Original number of features of 73  to a Reduced number of features of 8 ['year' 'odometer' 'cylinders_4 cylinders' 'cylinders_8 cylinders' 'fuel_diesel' 'drive_4wd' 'drive_fwd' 'manufacturer_category_Other']. 
 
 ## Insights from Feature Importances - Pareto Chart
-
 The Pareto chart below highlights the importance of various features in predicting the price of used cars. The key insights are as follows:
+![ParetoChartOfKeyReducedFeatures](https://github.com/user-attachments/assets/6ceb0a23-44f5-4cf0-b795-a561bc7dc394)
 
 1. **Year**:
    - The year of the car is the most significant predictor of its price, contributing approximately 45% to the model's decision-making process.
@@ -310,7 +298,6 @@ The Pareto chart below highlights the importance of various features in predicti
 
 These insights can help used car dealers better understand the key drivers of car prices and make informed decisions about their inventory and pricing strategies.
 
-![Feature Importances - Pareto Chart](images/ParetoChartOfKeyReducedFeatures.png) 
 
 ### Model Evaluation Summary
 
