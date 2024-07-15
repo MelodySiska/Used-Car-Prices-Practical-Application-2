@@ -1,8 +1,10 @@
+Link to code: SiskaUsedCarPracticalApplication2.ipynb 
+
 # Used Car Prices Practical Application 2
  Analysis to understand which factors impact used car prices
 
  ## Overview:
-  In this project, I delved into a dataset sourced from Kaggle. Originally, the dataset comprised data on 3 million used cars. For the purposes of this analysis and to enhance processing  speed, I  worked with a subset containing information on 426,000 cars. The objective is to identify the factors that influence a car's price. Based on my analysis, I was asked tol provide the client, a used car dealership, with clear recommendations on what features consumers prioritize when purchasing a used car.
+In this project, I delved into a dataset sourced from Kaggle. Originally, the dataset comprised data on 3 million used cars. For the purposes of this analysis and to enhance processing  speed, I  worked with a subset containing information on 426,000 cars. The objective is to identify the factors that influence a car's price. Based on my analysis, I was asked tol provide the client, a used car dealership, with clear recommendations on what features consumers prioritize when purchasing a used car.
 
 
 ## Business Understanding: 
